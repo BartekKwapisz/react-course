@@ -1,7 +1,9 @@
+import {useState} from 'react';
+
 function Todo(props) {
+  const [ modalIsOpen, setModalIsOpen ] = useState(false);
   function deleteHandler() {
-    console.log("Clicked");
-    console.log(props.text);
+     setModalIsOpen(true);
   }
   return (
     <div className="card">
